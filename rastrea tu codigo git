@@ -1,0 +1,75 @@
+Git es el sistema de control de versiones (VCS) más popular en uso hoy en día. Permite que varios desarrolladores colaboren juntos en el software. En esta sección, aprenderemos qué es Git, como funciona y como usar sus comandos básicos.
+
+Antes de saltar directamente a Git, desarrollemos algunos conceptos comunes a la mayoría de los proyectos de programación.
+
+El conjunto completo de directorios y archivos que componen un proyecto de software se denomina codebase. El project root es la carpeta de más alto nivel en el árbol de directorios del proyecto. Los archivos de código se pueden incluir directamente en la raíz del proyecto o se pueden organizar en varios niveles de carpetas.
+
+Cuando el código base esté listo para la prueba o la implementación, se puede compilar en el programa que se ejecutará en su computadora. El proceso de compilación puede incluir uno o más pasos que convierten el código escrito por humanos en un ejecutable que se puede ejecutar en los chips de procesamiento de su computadora.
+
+Una vez que se crea el código, el programa está listo para ejecutarse en tú sistema operativo específico, como Linux, Mac OS o Windows.
+
+Con el tiempo, los desarrolladores actualizan el código del proyecto para agregar nuevas funciones, corregir errores, implementar actualizaciones de seguridad y más. En general, hay tres formas en que los desarrolladores pueden realizar estos cambios en un proyecto de software:
+
+Agregar nuevos archivos y carpetas al proyecto
+Edite el código en archivos y carpetas existentes
+Eliminar archivos y carpetas existentes
+A medida que crecen los proyectos y se agregan nuevas características, aumenta la cantidad de archivos y carpetas (así como la cantidad de código dentro de ellos). Los proyectos grandes pueden crecer hasta cientos de miles de archivos que contienen millones de líneas de código.
+
+Para respaldar este crecimiento, la cantidad de desarrolladores en equipos de proyectos grandes generalmente aumenta. Los grandes proyectos de software pueden tener cientos o incluso miles de desarrolladores trabajando en conjunto.
+
+Esto plantea la pregunta: "¿Cómo es posible que todos estos desarrolladores, que pueden estar dispersos geográficamente por todo el mundo realizan un seguimiento del código de su proyecto de software de tal manera que puedan trabajar juntos en un solo proyecto?"
+
+Los equipos de desarrollo necesitan una forma de realizar un seguimiento exacto de los cambios que se realizaron en el código, qué archivos o carpetas se vieron afectados y quién realizó cada cambio. Cada desarrollador también debe poder obtener actualizaciones de todos los demás desarrolladores.
+
+Este proceso se denomina versionado o control de versiones. Los desarrolladores usan herramientas especiales llamadas Sistemas de control de versiones (VCS) para rastrear, administrar y compartir las versiones de los proyectos de software. Aquí hay algunos sistemas de control de versiones populares que se utilizan activamente en estos días:
+
+Git
+Subversion (SVN)
+Mercurial (Hg)
+Sin embargo, Git ha ganado la corona como el VCS de referencia del día. Es, con diferencia, el VCS más popular que utilizan las comunidades gubernamentales, comerciales y de código abierto de todo el mundo.
+
+Git forma el núcleo de las populares plataformas VCS basadas en la web como GitHub y Bitbucket. Git es una herramienta esencial para cualquier desarrollador completo para agregar a su conjunto de habilidades.
+
+Comandos básicos de Git
+Git crea y almacena información sobre nuestros proyectos de software en algo llamado repositorio de Git. Un repositorio de Git es solo una carpeta oculta en su computadora que Git usa para almacenar datos sobre los archivos de código en un proyecto de software.
+
+Cada proyecto de software en el que trabajamos normalmente tiene su propio repositorio Git para almacenar información relacionada con ese proyecto. De esta manera, el código relacionado con diferentes proyectos en una sola computadora se puede rastrear por separado.
+
+Hay dos formas principales de crear un repositorio Git en su computadora. El primero es crear un repositorio Git completamente nuevo en una carpeta existente en su sistema de archivos.
+
+Para hacer esto, simplemente abra la línea de comando, cree una nueva carpeta en algún lugar conveniente como en su escritorio y navegue hasta ella:
+
+cd ~/Desktop
+
+mkdir testgit
+ 
+cd testgit/
+Ahora que creamos una nueva carpeta y navegamos en ella, podemos inicializar un nuevo repositorio de Git usando el comando:
+
+git init
+Deberías ver un resultado similar al siguiente:
+
+Initialized empty Git repository in /Users/me/Desktop/testgit/.git/
+Todos los comandos de Git que ejecutaremos comienzan con la palabra git seguida de un espacio y luego el comando específico de Git que nos gustaría ejecutar. A veces también agregaremos banderas y argumentos después de los comandos de Git.
+
+El comando git init crea un folder escondido que se llama .git ien el directorio actual.  Esta carpeta es el repositorio de Git que mencionamos anteriormente. Puedes ver esto ejecutando el comando  ls -al.
+
+La segunda forma de obtener un repositorio de Git en su computadora es descargar uno de otro lugar, como Bitbucket o GitHub.
+
+Bitbucket y Github son sitios web que permiten a las personas alojar proyectos de código abierto que se pueden descargar a su computadora.
+
+Si buscas un proyecto que te parezca interesante en Bitbucket o GitHub, verás un botón llamado Clone. Este botón te proporcionará un comando y una URL que puedes copiar y pegar en la terminal de línea de comandos. Se verá algo como esto:
+
+git clone https://jacobstopak@bitbucket.org/jacobstopak/baby-git.git
+El comando git clone  descarga el repositorio desde la URL especificada a una nueva carpeta en tu computadora. La URL puede ser una URL web como en el ejemplo anterior o una URL SSH de la siguiente manera:
+
+git clone git@bitbucket.org:jacobstopak/baby-git.git
+Después de ejecutar el comando git clone, deberías ver una nueva carpeta creada. Si navegas en el, verás todos los archivos y subcarpetas que componen el proyecto que descargaste.
+
+El siguiente comando que mencionaremos es git add <filename.ext>. El comando git add se usa para decirle a Git qué archivos queremos que rastree y para agregar cambios en los archivos ya rastreados a Git. staging area.
+
+Una vez que los archivos nuevos o modificados se han preparado, se pueden confirmar en el repositorio mediante el comando git commit -m "Commit message". Esto almacenará los cambios en todos los archivos preparados en el repositorio de Git.
+
+Los comandos git status  y git log son útiles para revisar el estado actual del directorio de trabajo y el historial de confirmación de su proyecto.
+
+Apenas arañamos la superficie aquí. Git tiene muchos más comandos esenciales con los que definitivamente vale la pena familiarizarse.
